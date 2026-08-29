@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Особое приглашение</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --bg-milk: #FAF8F5;
+            --bg-card: #FFFFFF;
+            --text-main: #2C2A29;
+            --text-muted: #7A7571;
+            --accent-wine: #6B1D2F;
+            --accent-wine-hover: #521422;
+            --accent-gold: #D4AF37;
+            --border-soft: #E8E2D9;
+            --shadow-soft: 0 15px 35px rgba(107, 29, 47, 0.06), 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-milk);
+            color: var(--text-main);
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        html {
+            height: -webkit-fill-available;
+        }
+
+        /* Индикатор прогресса */
+        .progress-bar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: var(--accent-wine);
+            font-weight: 500;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border-soft);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        /* Контейнер приложения */
+        .app-container {
+            width: 100%;
+            max-width: 440px;
+            padding: 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Карточка экрана */
+        .screen {
+            background: var(--bg-card);
+            border-radius: 28px;
+            padding: 36px 28px;
+            box-shadow: var(--shadow-soft);
+            border: 1
